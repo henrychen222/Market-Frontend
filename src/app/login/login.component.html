@@ -1,0 +1,33 @@
+<div class="background">
+<nav>
+  <a id="signup" routerLink="/signup">Sign Up</a>
+</nav>
+
+<div class="loginForm">
+  <img class="img-responsive" src="assets/Picture1.png">
+  <p class="lead">Building Product Selection Platform</p>
+  <app-alert></app-alert>
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (submit)="onSubmit()">
+
+    <div class="form-group">
+      <!-- <label for="username">Username</label> -->
+      <input name="username" formControlName="username" type="username" class="form-control" id="username"
+             aria-describedby="emailHelp" placeholder="Enter email" [ngClass]="{ 'is-invalid': submitted && f().username.errors }">
+        <div *ngIf="submitted && f().username.errors" class="invalid-feedback">
+            <div *ngIf="f().username.errors.required">Username is required</div>
+        </div>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <!-- <label for="password">Password</label> -->
+      <input name="password" formControlName="password" type="password" class="form-control" id="password"
+             placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f().password.errors }" />
+      <div *ngIf="submitted && f().password.errors" class="invalid-feedback">
+          <div *ngIf="f().password.errors.required">Password is required</div>
+      </div>
+    </div>
+    <button [disabled]="loading" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>

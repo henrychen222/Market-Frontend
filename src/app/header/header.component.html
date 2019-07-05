@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header header">
+      <a class="navbar-brand" [routerLink]="['/home']">
+        <img src="assets/Picture2.png"
+      /></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <span id="search" class="nav navbar-nav"><app-home></app-home></span>
+      <ul class="nav navbar-nav navbar-right logout">
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+</nav>

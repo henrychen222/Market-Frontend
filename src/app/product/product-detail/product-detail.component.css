@@ -1,0 +1,78 @@
+.info-menu-block {
+  display: block;
+  margin-top: 20px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #ddd;
+}
+a {
+  color: #000;
+}
+.info-meu {
+  text-align: center;
+  width: 200px;
+  padding: 5px 7px 2px 7px;
+  margin-bottom: 0;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 1px 0px 0px;
+  /* display: inline; */
+}
+.part1 {
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 2.5%;
+  height: 400px;
+  /* display: inline; */
+  float: left;
+}
+h2 {
+  margin-left: 5%;
+  float: none;
+}
+/* tbody {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ddd;
+} */
+th, td {
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
+  border-color: #ddd;
+}
+.row-title, .sub-row-title {
+  background-color: #ddd;
+  /* width: 200px;
+  padding: 8px; */
+}
+
+.part2, .part3 {
+  width: 80%;
+  margin-left: 5%;
+}
+
+.part4 {
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 2.5%;
+  float: left;
+}
+
+.part4 div tr th {
+  width: 200px;
+  padding: 8px;
+  display: block;
+}
+.part4 div tr td {
+  padding: 8px 0px 8px 8px;
+  width: 400px;
+}
+.part4 div tr th, .part4 div tr td {
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: #ddd;
+}
+
+.list-path {
+  display: inline;
+}

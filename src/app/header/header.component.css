@@ -1,0 +1,17 @@
+#search {
+  width: 70%;
+  height: 100%;
+  margin-top: 10px;
+  margin-left: 70px;
+  display: inline-flex;
+  justify-content: center;
+  float: left;
+}
+
+.header {
+  width: 10%;
+}
+.container-fluid {
+  padding-top: 10px;
+  /* padding-bottom: 5px; */
+}

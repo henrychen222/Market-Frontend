@@ -1,0 +1,28 @@
+<label class="search">Search</label>
+<button type="submit" class="btn btn-primary submit" (click)="onFilterSubmit($event)">Save</button>
+<button type="submit" class="btn btn-primary clear" (click)="onFilterClear()">Clear</button>
+
+<div id="accordion">
+  <div *ngFor="let attrType of attributes; let index=index">
+    <div class="card">
+      <h5 class="mb-0">
+        <label class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <div *ngIf="attributes">
+            {{attrType.attributeTypeName}}
+          </div>
+        </label>
+      </h5>
+      <div *ngIf="filter && attributes">
+        <div *ngFor="let attr of filter[attrType.attributeTypeName]; let i = index">
+          <div class="form-inline" *ngIf="attr && attr.isRange === 1">
+            <label class="form-group">{{attr.attributeName | parenthes}}</label><br>
+            <input id='{{"left-" + attr.attributeName}}' type="number" [(ngModel)]="attr.rangeSlider.minValue">
+            <div class="custom-slider">
+              <ng5-slider [(value)]="attr.rangeSlider.minValue" [(highValue)]="attr.rangeSlider.maxValue" [options]="attr.rangeSlider.options"></ng5-slider>
+            </div>
+            <input id='{{"right-" + attr.attributeName}}' type="number" [(ngModel)]="attr.rangeSlider.maxValue">
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

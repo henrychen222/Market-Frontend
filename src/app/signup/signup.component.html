@@ -1,0 +1,94 @@
+<!--Wei Chen  4.29-->
+
+<div class="background">
+<nav>
+  <a id="login" routerLink="/login">Login</a>
+</nav>
+
+  <div class="container">
+      <div class="">
+          <img class="img-responsive" src="assets/Picture1.png">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <app-alert></app-alert>
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" formControlName="username" class="form-control"
+                   [ngClass]="{ 'is-invalid': submitted && f().username.errors }"/>
+            <div *ngIf="submitted && f().username.errors" class="invalid-feedback">
+              <div *ngIf="f().username.errors.required">Username is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" formControlName="password" class="form-control"
+                   [ngClass]="{ 'is-invalid': submitted && f().password.errors }"/>
+            <div *ngIf="submitted && f().password.errors" class="invalid-feedback">
+              <div *ngIf="f().password.errors.required">Password is required</div>
+              <div *ngIf="f().password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" formControlName="confirmPassword" class="form-control"
+                   [ngClass]="{ 'is-invalid': submitted && f().confirmPassword.errors }"/>
+            <div *ngIf="submitted && f().confirmPassword.errors" class="invalid-feedback">
+              <div *ngIf="f().confirmPassword.errors.required">Confirm Password is required</div>
+              <div *ngIf="f().confirmPassword.errors.mustMatch">Passwords must match</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>FirstName</label>
+            <input type="text" formControlName="firstname" class="form-control"
+                   [ngClass]="{ 'is-invalid': submitted && f().firstname.errors }"/>
+            <div *ngIf="submitted && f().firstname.errors" class="invalid-feedback">
+              <div *ngIf="f().firstname.errors.required">FirstName is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>LastName</label>
+            <input type="text" formControlName="lastname" class="form-control"
+                   [ngClass]="{ 'is-invalid': submitted && f().lastname.errors }"/>
+            <div *ngIf="submitted && f().lastname.errors" class="invalid-feedback">
+              <div *ngIf="f().lastname.errors.required">LastName is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" formControlName="email" class="form-control"
+                   [ngClass]="{ 'is-invalid': submitted && f().email.errors }"/>
+            <div *ngIf="submitted && f().email.errors" class="invalid-feedback">
+              <div *ngIf="f().email.errors.required">Email is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary">Register</button>
+          </div>
+        </form>
+      </div>
+  </div>
+
+</div>
+
+<!--<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5">-->
+
+<!--  <p class="h4 mb-4">Sign up</p>-->
+
+<!--  <div class="form-row mb-4">-->
+<!--    <div class="col">-->
+<!--      <input type="text" formControlName="firstName" id="defaultRegisterFormFirstName" class="form-control"-->
+<!--        placeholder="First name">-->
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <input type="text" formControlName="lastName" id="defaultRegisterFormLastName" class="form-control"-->
+<!--        placeholder="Last name">-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <input type="email" formControlName="email" id="defaultRegisterFormEmail" class="form-control mb-4"-->
+<!--    placeholder="E-mail">-->
+
+<!--  <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>-->
+
+<!--  <hr>-->
+
+<!--</form>-->

@@ -1,0 +1,35 @@
+/*Wei*/
+/* nav {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+} */
+
+
+.container {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.background {
+  height: 100%;
+  background: linear-gradient(to bottom, lightskyblue, white) fixed;
+}
+/*
+:host{
+  height: 100%;
+  background: linear-gradient(to bottom, lightskyblue, white) fixed;
+} */
+
+nav{
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: right;
+}
+.img-responsive {
+  width: 30%;
+  margin-left: 35%;
+}
+ button {
+   float: right;
+ }

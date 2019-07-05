@@ -1,0 +1,28 @@
+<ol class="breadcrumb">
+  <li>Mechanical</li>
+  <li>{{subCateName}}</li>
+</ol>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-xs-12 col-sm-4" *ngFor="let product of products">
+          <div class="thumbnail">
+            <a routerLink="/products/{{product.productId}}">
+              <!-- <label>link{{product.productId}}</label> -->
+              <img class="product-img" src="https://media.mitre10.com.au/media/catalog/product/cache/1/small_image/250x250/9df78eab33525d08d6e5fb8d27136e95/C/W/CWF121.jpg" alt="image">
+            </a>
+
+               <div class="caption">
+
+                  <h5 class="card-title align-center" *ngFor="let s of product.description.split('/')">{{s}}</h5>
+                  <div class="techs">
+                  <p class="align-center" *ngFor="let attr of product.attributes | keys">{{attr | parenthes}}: {{product.attributes[attr]}}</p>
+                  </div>
+                  <input type="checkbox" (change)="handleCheckbox($event, product)"> Compare
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<button *ngIf="productsToCompare.length > 0" class="btn btn-primary" (click)="handleCompare()">Compare</button>
+
+

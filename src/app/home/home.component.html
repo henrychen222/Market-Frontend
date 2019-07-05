@@ -1,0 +1,23 @@
+<!-- <nav>
+  <button (click)="logout()">Logout</button>
+</nav> -->
+
+<form [formGroup]="subCatesForm" (submit)="onSubmit()" id="form" class="form-inline">
+  <div class="form-group">
+    <select (change)='showSubCate($event.target.value)' name="cate" class="form-control">
+      <option value='All'>--All--</option>
+      <option *ngFor="let cate of cates" [value]="cate">{{cate}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <input list="SubCates" name="subCate" formControlName="subCate" class="form-control"/>
+    <datalist id="SubCates" name="subCateList">
+      <option *ngFor="let subcate of subCates" [ngValue]="subcate">{{subcate.name}}</option>
+    </datalist>
+
+  </div>
+
+  <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+</form>
+
+<!-- <button (click)="testClick($event)">Test</button> -->

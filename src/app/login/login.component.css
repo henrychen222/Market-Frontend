@@ -1,0 +1,34 @@
+/*Wei*/
+.loginForm {
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 10%;
+
+}
+
+.background {
+  height: 100%;
+  background: linear-gradient(to bottom, lightskyblue, white) fixed;
+}
+/*
+:host{
+  height: 100%;
+  background: linear-gradient(to bottom, lightskyblue, white) fixed;
+} */
+
+nav{
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: right;
+}
+.img-responsive {
+  width: 50%;
+  margin-left: 25%;
+}
+.lead {
+  text-align: center;
+}
+button {
+  float: right;
+}
+

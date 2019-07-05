@@ -1,0 +1,63 @@
+/* #accordion {
+  width: 350px;
+  margin-left: 50px;
+} */
+
+h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card {
+  border-style: solid;
+  border-width: 2px;
+  margin-bottom: 2px;
+  padding-left: 10px;
+}
+
+.form-group {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.submit, .clear {
+  margin-left: 10%;
+  margin-bottom: 5px;
+}
+input[type=number] {
+  width: 50px;
+  float: left;
+}
+
+.custom-slider .ng5-slider  {
+  width: 50%;
+  float: left;
+  margin: 15px 5px 0 5px;
+  padding: 0;
+}
+.form-inline {
+  height: 60px;
+}
+
+.custom-slider .ng5-slider .ng5-slider-selection {
+  background: rgb(142, 142, 134) !important;
+  margin-top: -4px;
+}
+.custom-slider .ng5-slider .ng5-slider-bar {
+  background: none;
+}
+.custom-slider .ng5-slider .ng5-slider-pointer {
+  width: 12px;
+  height: 12px;
+  top: auto; /* to remove the default positioning */
+  bottom: 0;
+  background-color: rgb(142, 142, 134);
+  border-radius: 5px;
+  /* border-top-left-radius: 0px;
+  border-top-right-radius: 0px; */
+}
+.custom-slider .ng5-slider .ng5-slider-pointer:after {
+  display: none;
+}
+.custom-slider .ng5-slider .ng5-slider-bubble {
+  display: none;
+}
